@@ -1,31 +1,6 @@
 qrt = {}
 process = {}
 
---[[
-[!] Do not edit/remove this comment, you'll need this information. 
-
-[+] Quartet Tango BIOS (bios.firm)
--- Description --
-Handles boot, assigns globals for Quarts to use.
-
--- Version Metadata --
-BIOS Ver: 0.5
-qOS Ver: 0.5
-
--- Notes -- 
-RTM Version.
-
--- [!] Warning [!] -- 
-THIS BIOS.FIRM IS FOR USE WITH THE QUARTET TANGO ONLY.
-Broken BIOS = Broken Quartet. Don't mess with this unless:
-1. It's part of an overall qOS system update. 
-2. It's a patch intended for the version of qOS you are using. 
-
-Failing to follow these instructions can cause problems, and 
-even corrupt Quartet's onboard flash memory.
-
-]]--
-
 ---	---	---
 
 bios.osVer = 0

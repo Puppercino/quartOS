@@ -1,28 +1,12 @@
 local memtest = {}
 
---[[
-[!] Do not edit/remove this comment, you'll need this information. 
-
-[+] BIOS Memory Test (memtest.qrt)
--- Description --
-Ensures flashmemory is valid and provides memory data to the BIOS.
-
--- Version Metadata --
-Quart Ver: 0.9
-qOS Ver: 0.9
-
--- Notes -- 
-RTM Version.
-
--- [!] Warning [!] -- 
-Only install this quart when:
-1. It's part of an overall qOS system update. 
-2. It's a patch intended for the version of qOS you are using. 
-
-Failing to follow these instructions can cause problems, and 
-even corrupt Quartet's onboard flash memory.
-
-]]--
+-- All quarts require a META table from quartOS v1.0,
+memtest.META = {
+    "name"          = "Memory Test",    -- Pretty name of Quart.
+    "author"        = "Meowcino"        -- Author name.
+    "version"       = "0.0.1",          -- Pretty version of Quart.
+    "suspendable"   = false,            -- Whether the quart can be suspended via Standby.
+}
 
 ---	---	---
 memtest.memory_table = {}
@@ -57,6 +41,11 @@ function memtest.getAvailMem()
 	end
 	avail = math.ceil(avail/1024)
 	return avail
+end
+
+-- init function is called once when the quart is first ran
+function memtest.init()
+
 end
 
 -- update function is repeated every time tick
